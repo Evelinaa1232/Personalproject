@@ -1,0 +1,73 @@
+body{
+    background-image: url(greydots.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    min-height: 100vh;
+    animation: bgAnim 2s 8s linear infinite;
+}
+@keyframes bgAnim{
+    25%{
+        background-position: 43% 52%;
+    }
+    50%{
+        background-position: 55% 45%;
+    }
+}
+
+.red{
+    background-image: url(reddot.png);
+    width: 30vw;
+    height: 30vw;
+    position: absolute;
+    background-size:contain;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: circleAnim 10s forwards;
+    transform-origin: -10% -10%;
+}
+
+@keyframes circleAnim{
+    0%{
+        opacity: 0;
+        width: 3vw;
+        height: 3vw;
+    }
+    50%{
+        transform-origin: 0% 0%;
+    }
+    100%{
+        opacity: 1;
+        width: 30vw;
+        height: 30vw;
+        transform: translate(-50%,-50%) rotate(360deg);
+        transform-origin: 0% 0%;
+    }
+}
+
+
+.splash{
+    background-image: url(splash.png);
+    width: 0vw;
+    height: 0vw;
+    position: absolute;
+    background-size:contain;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: splashAnim 3s 9s forwards;
+    transform-origin: -10% -10%;
+}
+
+@keyframes splashAnim{
+    0%{
+        opacity: 0;
+        width: 3vw;
+        height: 3vw;
+    }
+    100%{
+        opacity: 1;
+        width: 100vw;
+        height: 100vh;
+    }
+}
